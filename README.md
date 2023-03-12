@@ -4,4 +4,8 @@
 3. Клонировать репозиторий через меню IDEA file - new - project from version control используя URL:https://github.com/zhuravlini/Zhu-diploma.git
 4. В терминале IDEA набрать команду docker-compose up
 5. В терминале IDEA набрать команду java -jar ./artifacts/aqa-shop.jar
-6. В терминале IDEA набрать команду ./gradlew clean test
+6. Запустить тесты командой
+ - gradlew clean test -D db.url=jdbc:mysql://localhost:3306/app - для БД MysSQL
+либо
+ - gradlew clean test -D db.url=jdbc:postgresql://localhost:5432/app - для БД Postgresql
+7. Открыть отчет о прохождении тестов командой gradlew allureServe
